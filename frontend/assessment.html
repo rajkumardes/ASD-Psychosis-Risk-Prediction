@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Assessment | ASD-PRP</title>
+
+    <link rel="stylesheet" href="leena.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <div class="brand">
+        <div class="brand-mark">A</div>
+
+        <div>
+            <h2>ASD-PRP</h2>
+            <span>Research Prototype</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="assessment.html" class="active">Assessment</a>
+    </nav>
+
+</header>
+
+
+<!-- PAGE HEADER -->
+<section class="assessment-hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            ● ML + Explainable AI
+        </div>
+
+        <h1>
+            Psychosis Risk
+            <span>Assessment</span>
+        </h1>
+
+        <p>
+            Enter the assessment information below. The system will analyze
+            the provided characteristics using the trained machine learning model.
+        </p>
+
+        <div class="hero-note">
+            <span>🔒</span>
+            Research prototype · Data should be handled confidentially
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MAIN CONTENT -->
+<main class="assessment-container">
+
+    <!-- PROGRESS -->
+    <div class="progress-card">
+
+        <div class="progress-top">
+            <div>
+                <strong>Assessment Progress</strong>
+                <span>Complete all sections before prediction</span>
+            </div>
+
+            <div class="progress-number">
+                01 / 05
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+    </div>
+
+
+    <form id="assessmentForm">
+
+
+        <!-- SECTION 1 -->
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <div class="section-icon">01</div>
+
+                <div>
+                    <h2>Basic Information</h2>
+                    <p>General demographic information</p>
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="age">
+                        Age
+                        <span>*</span>
+                    </label>
+
+                    <div class="input-wrap">
+                        <input
+                            type="number"
+                            id="age"
+                            min="5"
+                            max="24"
+                            placeholder="Enter age"
+                            required
+                        >
+                        <small>Years</small>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="gender">
+                        Gender
+                        <span>*</span>
+                    </label>
+
+                    <select id="gender" required>
+                        <option value="">Select gender</option>
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                    </select>
+
+                    <small class="field-note">
+                        Uses the categories represented in the training dataset.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SECTION 2 -->
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <div class="section-icon">02</div>
+
+                <div>
+                    <h2>Development & Behaviour</h2>
+                    <p>Developmental, social and behavioural characteristics</p>
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="speech_delay">Speech Delay</label>
+
+                    <select id="speech_delay" required>
+                        <option value="">Select</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="language_score">Language Score</label>
+
+                    <input
+                        type="number"
+                        id="language_score"
+                        min="0"
+                        max="10"
+                        placeholder="0 - 10"
+                        required
+                    >
+
+                    <small>Score range: 0–10</small>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="social_score">Social Score</label>
+
+                    <input
+                        type="number"
+                        id="social_score"
+                        min="0"
+                        max="10"
+                        placeholder="0 - 10"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="repetitive_behavior">Repetitive Behaviour</label>
+
+                    <input
+                        type="number"
+                        id="repetitive_behavior"
+                        min="0"
+                        max="10"
+                        placeholder="0 - 10"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="cognitive_score">Cognitive Score</label>
+
+                    <input
+                        type="number"
+                        id="cognitive_score"
+                        min="0"
+                        max="10"
+                        placeholder="0 - 10"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="attention_deficit">Attention Deficit</label>
+
+                    <select id="attention_deficit" required>
+                        <option value="">Select</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SECTION 3 -->
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <div class="section-icon">03</div>
+
+                <div>
+                    <h2>Family History</h2>
+                    <p>Relevant family background information</p>
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="family_history_asd">
+                        Family History of ASD
+                    </label>
+
+                    <select id="family_history_asd" required>
+                        <option value="">Select</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="family_history_psychosis">
+                        Family History of Psychosis
+                    </label>
+
+                    <select id="family_history_psychosis" required>
+                        <option value="">Select</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SECTION 4 -->
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <div class="section-icon">04</div>
+
+                <div>
+                    <h2>Emotional & Functional Factors</h2>
+                    <p>Emotional regulation, sleep and daily functioning</p>
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="anxiety_level">Anxiety Level</label>
+
+                    <input
+                        type="number"
+                        id="anxiety_level"
+                        min="0"
+                        max="10"
+                        placeholder="0 - 10"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="emotional_regulation">
+                        Emotional Regulation
+                    </label>
+
+                    <input
+                        type="number"
+                        id="emotional_regulation"
+                        min="0"
+                        max="10"
+                        placeholder="0 - 10"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="sleep_quality">Sleep Quality</label>
+
+                    <input
+                        type="number"
+                        id="sleep_quality"
+                        min="0"
+                        max="10"
+                        placeholder="0 - 10"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="developmental_delay">
+                        Developmental Delay
+                    </label>
+
+                    <select id="developmental_delay" required>
+                        <option value="">Select</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="functional_decline">
+                        Functional Decline
+                    </label>
+
+                    <select id="functional_decline" required>
+                        <option value="">Select</option>
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                    </select>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SECTION 5 -->
+        <section class="form-section">
+
+            <div class="section-heading">
+
+                <div class="section-icon">05</div>
+
+                <div>
+                    <h2>Psychosis-Related Indicators</h2>
+                    <p>Research variables used by the prediction model</p>
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="paranoia_traits">
+                        Paranoia Traits
+                    </label>
+
+                    <input
+                        type="number"
+                        id="paranoia_traits"
+                        min="0"
+                        max="10"
+                        placeholder="0 - 10"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="perceptual_abnormalities">
+                        Perceptual Abnormalities
+                    </label>
+
+                    <input
+                        type="number"
+                        id="perceptual_abnormalities"
+                        min="0"
+                        max="10"
+                        placeholder="0 - 10"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- DISCLAIMER -->
+        <div class="research-disclaimer">
+
+            <div class="disclaimer-icon">ⓘ</div>
+
+            <div>
+                <strong>Research Prototype</strong>
+
+                <p>
+                    This system is developed for academic research and
+                    demonstration purposes. The prediction should not be
+                    interpreted as a clinical diagnosis or medical advice.
+                </p>
+            </div>
+
+        </div>
+
+
+
+        <!-- ACTION -->
+        <div class="submit-area">
+
+            <button type="submit" class="predict-btn">
+
+                <span>Predict Risk</span>
+
+                <span class="arrow">→</span>
+
+            </button>
+
+            <p>
+                The trained ML model will analyze all 17 input features.
+            </p>
+
+        </div>
+
+
+
+        <!-- RESULT -->
+        <div
+            id="resultBox"
+            class="result-box"
+            style="display:none;"
+        ></div>
+
+
+    </form>
+
+</main>
+
+
+<footer>
+
+    <div>
+        <strong>ASD-PRP</strong>
+        <span>Early-Based Psychosis Risk Prediction Research System</span>
+    </div>
+
+    <p>Academic Research Prototype</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
